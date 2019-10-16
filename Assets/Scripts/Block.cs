@@ -23,6 +23,7 @@ public class Block : MonoBehaviour
 
     private void DestoryBlock()
     {
+        FindObjectOfType<GameStatus>().AddToScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position); // because the listener is at the camera
         Destroy(gameObject);
         level.BLockDestroyed();
