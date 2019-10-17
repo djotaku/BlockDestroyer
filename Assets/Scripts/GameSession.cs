@@ -10,6 +10,7 @@ public class GameSession : MonoBehaviour
     [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f; // initialized at 1f; Range allows it to be a slider in the inspector in Unity
     [SerializeField] int pointsPerBlockDestroyed = 83;
     [SerializeField] TextMeshProUGUI scoreText; // allows us to link to the text within Unity Inspector
+    [SerializeField] bool isAutoPlayEnabled;
 
     // State variables
 
@@ -52,5 +53,10 @@ public class GameSession : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }
