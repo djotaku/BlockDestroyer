@@ -13,16 +13,27 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
+        CountBreakableBlocks();
+    }
+
+    private void CountBreakableBlocks()
+    {
         level = FindObjectOfType<Level>(); // a way to link to the level script without using serialize field
-        level.CountBreakableBlocks();
+        if (tag == "Breakable")
+        {
+            level.CountBlocks();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestoryBlock();
+        if (tag == "Breakable")
+        {
+            DestroyBlock();
+        }
     }
 
-    private void DestoryBlock()
+    private void DestroyBlock()
     {
         PlayBlockDestroySFX();
         Destroy(gameObject);
