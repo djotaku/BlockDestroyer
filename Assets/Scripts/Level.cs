@@ -6,13 +6,14 @@ public class Level : MonoBehaviour
 {
     // parameters
     [SerializeField] int breakableBlocks; // serialized for debugging purposes - not to change it in Unity
+    [SerializeField] string levelTitle;
 
     // cached reference
     SceneLoader sceneloader;
 
     private void Start()
     {
-        sceneloader = FindObjectOfType<SceneLoader>(); // grabs the Scenloader from this level
+        sceneloader = FindObjectOfType<SceneLoader>(); // grabs the Sceneloader from this level
     }
 
     public void CountBlocks()
@@ -27,5 +28,10 @@ public class Level : MonoBehaviour
         {
             sceneloader.LoadNextScene();
         }
+    }
+
+    public string GetLevelTitle()
+    {
+        return levelTitle;
     }
 }

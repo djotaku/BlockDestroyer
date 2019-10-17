@@ -11,6 +11,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] int pointsPerBlockDestroyed = 83;
     [SerializeField] TextMeshProUGUI scoreText; // allows us to link to the text within Unity Inspector
     [SerializeField] bool isAutoPlayEnabled;
+    [SerializeField] TextMeshProUGUI levelTitleText;
 
     // State variables
 
@@ -35,12 +36,14 @@ public class GameSession : MonoBehaviour
     private void Start()
     {
         scoreText.text = currentScore.ToString();
+        levelTitleText.text = FindObjectOfType<Level>().GetLevelTitle();
     }
 
     // Update is called once per frame
     void Update()
     {
         Time.timeScale = gameSpeed;
+        levelTitleText.text = FindObjectOfType<Level>().GetLevelTitle();
     }
 
     public void AddToScore()
