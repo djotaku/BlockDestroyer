@@ -8,7 +8,6 @@ public class Block : MonoBehaviour
     // config params 
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject blockSparklesVFX;
-    [SerializeField] int maxHits;
     [SerializeField] Sprite[] hitSprites;
 
     // cached reference
@@ -42,6 +41,7 @@ public class Block : MonoBehaviour
     private void HandleHit()
     {
         timesHit++;
+        int maxHits = hitSprites.Length + 1;
         if (timesHit >= maxHits) // >= in case somehow before it does this, it's gone past the maxHits value
         {
             DestroyBlock();
@@ -55,7 +55,14 @@ public class Block : MonoBehaviour
     private void ShowNextHitSprite() // this is used for affordance - or making the block change appearance as it gets hit
     {
         int spriteIndex = timesHit - 1;
-        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        if (hitSprites[spriteIndex] != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
+        else
+        {
+            Debug.LogError("Block Sprit is missing from array" + gameObject.name); // helps in case we mess up with filling the array with sprites - will tell us which block is wrong
+        }
     }
 
     private void DestroyBlock()
