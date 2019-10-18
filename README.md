@@ -26,6 +26,6 @@ Watch a video of the game playing itself: https://youtu.be/uwbml6dCAfM
 
  - Learned how to print the score to the screen and how to persist it from one level to another via the Singleton Pattern.
 
- - Using tags in Unity so that the scripts can do different things to the objects based on the script
+ - Using tags in Unity so that the scripts can do different things to the objects based on the tag
 
  - Makes prefabs vs Duplicates. Prefabs are more useful because they allow you to effect changes across all the instances of the Prefab in the game.
