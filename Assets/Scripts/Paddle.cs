@@ -39,7 +39,8 @@ public class Paddle : MonoBehaviour
         }
         else
         {
-            return Input.mousePosition.x / Screen.width * screenWidthInUnits;
+            //return Input.mousePosition.x / Screen.width * screenWidthInUnits;
+            return Input.GetAxis("Horizontal") / Screen.width * screenWidthInUnits;
         }
     }
 }
