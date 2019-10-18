@@ -28,4 +28,4 @@ Watch a video of the game playing itself: https://youtu.be/uwbml6dCAfM
 
  - Using tags in Unity so that the scripts can do different things to the objects based on the tag
 
- - Makes prefabs vs Duplicates. Prefabs are more useful because they allow you to effect changes across all the instances of the Prefab in the game.
+ - Prefabs vs Duplicates. Prefabs are more useful because they allow you to effect changes across all the instances of the Prefab in the game.
