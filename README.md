@@ -1,8 +1,10 @@
 # BlockDestroyer
 An arkanoid or brick breaker clone from the Unity class I'm taking
 
-# Things I've Improved Vs the end fo the Section Lectures
+# Things I've Improved after the end of the Section Lectures
  - Created my own levels
+
+ - Added ability to change title with each new level (did this on my own without any help! WHOOO!)
 
 # Things I learned in this section
 
