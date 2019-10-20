@@ -1,7 +1,7 @@
 # BlockDestroyer
 An arkanoid or brick breaker clone from the Unity class I'm taking
 
-Get binaries from here or play on the net via WebGL: http://server.ericsbinaryworld.com/WebGL/BlockDestroyerWebGL/
+Get binaries from this github repo (click on "Releases") or play on the net via WebGL: http://server.ericsbinaryworld.com/WebGL/BlockDestroyerWebGL/
 
 Watch a video of the game playing itself: https://youtu.be/uwbml6dCAfM
 
