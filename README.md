@@ -1,6 +1,10 @@
 # BlockDestroyer
 An arkanoid or brick breaker clone from the Unity class I'm taking
 
+Get binaries from this github repo (click on "Releases") or play on the net via WebGL: http://server.ericsbinaryworld.com/WebGL/BlockDestroyerWebGL/
+
+Watch a video of the game playing itself: https://youtu.be/uwbml6dCAfM
+
 # Things I've Improved after the end of the Section Lectures
  - Created my own levels
 
@@ -22,6 +26,8 @@ An arkanoid or brick breaker clone from the Unity class I'm taking
 
  - Learned how to print the score to the screen and how to persist it from one level to another via the Singleton Pattern.
 
- - Using tags in Unity so that the scripts can do different things to the objects based on the script
+ - Using tags in Unity so that the scripts can do different things to the objects based on the tag
 
- - Makes prefabs vs Duplicates. Prefabs are more useful because they allow you to effect changes across all the instances of the Prefab in the game.
+ - Prefabs vs Duplicates. Prefabs are more useful because they allow you to effect changes across all the instances of the Prefab in the game.
+ 
+  - how to make your game play itself for play testing
