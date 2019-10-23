@@ -26,7 +26,7 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y); // Vector2's hold x,y positions
-        paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX); // keeps it from going off left and right of screen
+        paddlePos.x = Mathf.Clamp(GetXPos()+paddlePos.x, minX, maxX); // keeps it from going off left and right of screen
         transform.position = paddlePos;
         
     }
@@ -40,7 +40,7 @@ public class Paddle : MonoBehaviour
         else
         {
             //return Input.mousePosition.x / Screen.width * screenWidthInUnits;
-            return Input.GetAxis("Horizontal") / Screen.width * screenWidthInUnits;
+            return Input.GetAxis("Horizontal") * Time.deltaTime * 15;
         }
     }
 }
