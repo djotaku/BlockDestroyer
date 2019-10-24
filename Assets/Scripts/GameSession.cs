@@ -38,6 +38,7 @@ public class GameSession : MonoBehaviour
     {
         scoreText.text = currentScore.ToString();
         levelTitleText.text = FindObjectOfType<Level>().GetLevelTitle();
+        Debug.Log(Options.mouse);
     }
 
     // Update is called once per frame
@@ -63,18 +64,4 @@ public class GameSession : MonoBehaviour
     {
         return isAutoPlayEnabled;
     }
-    public void SetControllerEnabled()
-    {
-        isControllerEnabled = true;
-    }
-
-    public void SetMouseEnabled()
-    {
-        isControllerEnabled = false;
-    }
-    public bool IsControllerEnabled()
-    {
-        return isControllerEnabled;
-    }
-
 }

@@ -26,7 +26,7 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y); // Vector2's hold x,y positions
-        if (theGameSession.IsControllerEnabled())
+        if (!Options.mouse)
         {
             paddlePos.x = Mathf.Clamp(GetXPos() + paddlePos.x, minX, maxX); // needed to move with controller
         }
@@ -44,7 +44,7 @@ public class Paddle : MonoBehaviour
         {
             return theBall.transform.position.x;
         }
-        else if (theGameSession.IsControllerEnabled())
+        else if (!Options.mouse)
         {
             return Input.GetAxis("Horizontal") * Time.deltaTime * 15;
         }

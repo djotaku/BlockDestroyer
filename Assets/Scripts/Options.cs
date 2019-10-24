@@ -5,21 +5,15 @@ using UnityEngine;
 public class Options : MonoBehaviour
 {
     // config params
-    
+    [SerializeField] public static bool mouse = true;
 
-    private void Awake()
+    public void Mouse()
     {
-        int gameStatusCount = FindObjectsOfType<Options>().Length;  //there's an 's' this time. Plural objects
-        if (gameStatusCount > 1)
-        {
-            gameObject.SetActive(false); // this is needed to prevent weird bugs in the singleton.
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+        mouse = true;
     }
 
-
+    public void Controller()
+    {
+        mouse = false;
+    }
 }
