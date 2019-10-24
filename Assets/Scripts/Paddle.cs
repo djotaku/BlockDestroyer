@@ -26,8 +26,15 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y); // Vector2's hold x,y positions
-        paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX); // keeps it from going off left and right of screen
-        transform.position = paddlePos;
+        if (!Options.mouse)
+        {
+            paddlePos.x = Mathf.Clamp(GetXPos() + paddlePos.x, minX, maxX); // needed to move with controller
+        }
+        else
+        {
+            paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX); // keeps it from going off left and right of screen
+        }
+            transform.position = paddlePos;
         
     }
 
@@ -36,6 +43,10 @@ public class Paddle : MonoBehaviour
         if (theGameSession.IsAutoPlayEnabled())
         {
             return theBall.transform.position.x;
+        }
+        else if (!Options.mouse)
+        {
+            return Input.GetAxis("Horizontal") * Time.deltaTime * 15;
         }
         else
         {

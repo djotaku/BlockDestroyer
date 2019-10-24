@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText; // allows us to link to the text within Unity Inspector
     [SerializeField] bool isAutoPlayEnabled;
     [SerializeField] TextMeshProUGUI levelTitleText;
+    [SerializeField] bool isControllerEnabled = false;
 
     // State variables
 
@@ -37,6 +38,7 @@ public class GameSession : MonoBehaviour
     {
         scoreText.text = currentScore.ToString();
         levelTitleText.text = FindObjectOfType<Level>().GetLevelTitle();
+        Debug.Log(Options.mouse);
     }
 
     // Update is called once per frame

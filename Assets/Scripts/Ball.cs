@@ -37,7 +37,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchOnMouseClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) | Input.GetButton("Fire1"))
         {
             myRigidBody2D.velocity = new Vector2(xPush, yPush);
             hasStarted = true;
