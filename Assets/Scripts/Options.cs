@@ -5,7 +5,7 @@ using UnityEngine;
 public class Options : MonoBehaviour
 {
     // config params
-    [SerializeField] bool isControllerEnabled = false;
+    
 
     private void Awake()
     {
@@ -21,18 +21,5 @@ public class Options : MonoBehaviour
         }
     }
 
-    public void SetControllerEnabled()
-    {
-        isControllerEnabled = true;
-    }
-
-    public void SetMouseEnabled()
-    {
-        isControllerEnabled = false;
-    }
-    public bool IsControllerEnabled()
-    {
-        return isControllerEnabled;
-    }
 
 }

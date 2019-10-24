@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText; // allows us to link to the text within Unity Inspector
     [SerializeField] bool isAutoPlayEnabled;
     [SerializeField] TextMeshProUGUI levelTitleText;
+    [SerializeField] bool isControllerEnabled = false;
 
     // State variables
 
@@ -61,6 +62,19 @@ public class GameSession : MonoBehaviour
     public bool IsAutoPlayEnabled()
     {
         return isAutoPlayEnabled;
+    }
+    public void SetControllerEnabled()
+    {
+        isControllerEnabled = true;
+    }
+
+    public void SetMouseEnabled()
+    {
+        isControllerEnabled = false;
+    }
+    public bool IsControllerEnabled()
+    {
+        return isControllerEnabled;
     }
 
 }
