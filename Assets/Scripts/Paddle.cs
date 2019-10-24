@@ -14,6 +14,7 @@ public class Paddle : MonoBehaviour
     // cached references
     GameSession theGameSession;
     Ball theBall;
+    Options theOptions;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y); // Vector2's hold x,y positions
-        if (theGameSession.IsControllerEnabled())
+        if (theOptions.IsControllerEnabled())
         {
             paddlePos.x = Mathf.Clamp(GetXPos() + paddlePos.x, minX, maxX); // needed to move with controller
         }
@@ -44,7 +45,7 @@ public class Paddle : MonoBehaviour
         {
             return theBall.transform.position.x;
         }
-        else if (theGameSession.IsControllerEnabled())
+        else if (theOptions.IsControllerEnabled())
         {
             return Input.GetAxis("Horizontal") * Time.deltaTime * 15;
         }
