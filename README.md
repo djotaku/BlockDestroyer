@@ -9,6 +9,8 @@ Watch a video of the game playing itself: https://youtu.be/uwbml6dCAfM
  - Created my own levels
 
  - Added ability to change title with each new level (did this on my own without any help! WHOOO!)
+ 
+ - Added controller support. A lot of help from /r/Unity3D and others on making sure my settings were correct. Also, Udemy class Laser defender code showed me what I needed in C# to make the controller work. But I figured out on my own how to setup an options page and make those options work throughout the game to allow the user to use either a mouse or the controller.
 
 # Things I learned in this section
 
