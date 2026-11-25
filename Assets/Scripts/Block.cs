@@ -11,7 +11,7 @@ public class Block : MonoBehaviour
     [SerializeField] Sprite[] hitSprites;
 
     // cached reference
-    Level level;
+    Level level; // fake change
 
     // state variables
     [SerializeField] int timesHit = 0; // serialized for debugging purposes. (SO you can see it in Unity)
